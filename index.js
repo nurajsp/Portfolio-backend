@@ -5,6 +5,7 @@ const port = 8080;
 
 require('dotenv').config();
 const Project = require('./Project');
+const Blog = require('./Blog');
 
 app.get('/', (req, res) => {
     res.send('Hello, World!');
@@ -22,4 +23,11 @@ app.get('/projects', async (req, res) => {
 app.get('/blogs', async (req, res) => {
     try {
         const blogs = await Blog.find();
-   
+        res.json(blogs);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Server running at ht

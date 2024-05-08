@@ -1,6 +1,6 @@
 const mongoose = require('./db');
 
-const projectSchema = new mongoose.Schema({
+const blogSchema = new mongoose.Schema({
     name: String,
     description: String,
 });
