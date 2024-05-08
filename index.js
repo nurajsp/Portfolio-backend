@@ -22,13 +22,4 @@ app.get('/projects', async (req, res) => {
 app.get('/blogs', async (req, res) => {
     try {
         const blogs = await Blog.find();
-        res.json(blogs);
-    } catch (err) {
-        res.status(500).json({ message: err.message });
-    }
-});
-
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}/`);
-});
-
+   
