@@ -30,4 +30,6 @@ app.get('/blogs', async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server running at ht
+    console.log(`Server running at http://localhost:${port}/`);
+});
+
