@@ -67,7 +67,7 @@ app.patch('/projects/:id', async (req, res) => {
 //Delete a project by id
 app.delete('/projects/:id', async (req, res) => {
     try {
-        const project = await Project.findByIdAndDelete(req.params.id);
+        const result = await Project.findByIdAndDelete(req.params.id);
         if (result) {
             res.json({ message: 'Project deleted' });
         } else {
